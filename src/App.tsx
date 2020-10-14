@@ -1,12 +1,11 @@
 import React from 'react';
+import { AppLayout } from "./AppLayout";
 import './App.scss';
 
 function App() {
   
   return (
-    <div className="app">
-        app
-    </div>
+    <AppLayout message="words"/>
   );
 }
 
