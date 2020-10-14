@@ -1,0 +1,22 @@
+.layout {
+
+    &__top {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #ccc;
+        z-index: 1;
+    }
+
+    &__content {
+        padding-top: 75px;
+    }
+
+    &__wrapper {
+        position: relative;
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+}

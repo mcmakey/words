@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppLayout } from "./AppLayout";
+import { AppLayout } from "components";
 import './App.scss';
 
 function App() {
