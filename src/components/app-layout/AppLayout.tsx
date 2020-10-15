@@ -1,15 +1,12 @@
 import * as React from "react";
+import { Header } from "components";
 import "./AppLayout.scss";
 
-type AppProps = { 
-    message: string 
-}; 
-
-const AppLayout: React.FC<AppProps> = ({ message }) => (
+const AppLayout: React.FC = () => (
     <div className="layout">
         <div className="layout__top">
             <div className="layout__wrapper">
-                header
+                <Header />
             </div>
         </div>
         <div className="layout__content">
