@@ -1,36 +1,7 @@
+@import "../../styles/modules/button-unstyled"; //TODO: need absolut path;
+
 .header-menu-button {
-
-// сброс стилей
-    background-color: transparent;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    outline: none !important;
-    border-radius: 0;
-    text-align: left;
-
-    &:hover {
-        background-color: transparent;
-    }
-
-    &:active,
-    &:focus {
-        background-color: transparent;
-        box-shadow: none;
-        background-color: transparent;
-        border: none;
-        outline: none !important;
-    }
-
-    &[disabled],
-    &.disabled {
-        opacity: 1;
-
-        &:hover {
-            opacity: 1;
-        }
-    }
-    //
+    @extend %button-unstyled;
 
     width: 30px;
     height: 100%;
@@ -60,17 +31,4 @@
             opacity: 0.5;
         }
     }
-}
-
-/* стили только для IE10 и IE11 (убирают дергунчик содержимого кнопки "при клике по ней в оных браузерах) */
-
-_:-ms-input-placeholder,
-:root .sp-button-unstyled {
-    position: relative;
-}
-
-_:-ms-input-placeholder,
-:root .sp-button-unstyled:active {
-    top: -1px !important;
-    left: -1px !important;
 }

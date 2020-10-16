@@ -1,0 +1,33 @@
+
+// modules
+%button-unstyled {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: none !important;
+    border-radius: 0;
+    text-align: left;
+
+    &:hover {
+        background-color: transparent;
+    }
+
+    &:active,
+    &:focus {
+        background-color: transparent;
+        box-shadow: none;
+        background-color: transparent;
+        border: none;
+        outline: none !important;
+    }
+
+    &[disabled],
+    &.disabled {
+        opacity: 1;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
