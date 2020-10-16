@@ -1,0 +1,76 @@
+.header-menu-button {
+
+// сброс стилей
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: none !important;
+    border-radius: 0;
+    text-align: left;
+
+    &:hover {
+        background-color: transparent;
+    }
+
+    &:active,
+    &:focus {
+        background-color: transparent;
+        box-shadow: none;
+        background-color: transparent;
+        border: none;
+        outline: none !important;
+    }
+
+    &[disabled],
+    &.disabled {
+        opacity: 1;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+    //
+
+    width: 30px;
+    height: 100%;
+
+    &__icon {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            box-shadow: 0 -9px 0 0 #777,
+                        0 9px 0 0 #777;
+            background-color: #777;
+        }
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+}
+
+/* стили только для IE10 и IE11 (убирают дергунчик содержимого кнопки "при клике по ней в оных браузерах) */
+
+_:-ms-input-placeholder,
+:root .sp-button-unstyled {
+    position: relative;
+}
+
+_:-ms-input-placeholder,
+:root .sp-button-unstyled:active {
+    top: -1px !important;
+    left: -1px !important;
+}

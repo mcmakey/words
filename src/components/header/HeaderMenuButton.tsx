@@ -1,5 +1,5 @@
 import * as React from "react";
-import "./Header.scss";
+import "./HeaderMenuButton.scss";
 
 type IProps = {
     onClick: () => void;
