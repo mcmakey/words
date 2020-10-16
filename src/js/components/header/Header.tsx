@@ -1,6 +1,6 @@
 import * as React from "react";
-import { useToggle } from "hooks";
-import { Menu } from "components";
+import { useToggle } from "js/hooks";
+import { Menu } from "js/components";
 import { HeaderMenuButton } from "./HeaderMenuButton";
 import "./Header.scss";
 

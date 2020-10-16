@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Header } from "components";
+import { Header } from "js/components";
 import "./AppLayout.scss";
 
 const AppLayout: React.FC = () => (
