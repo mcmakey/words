@@ -1,0 +1,73 @@
+.word {
+    display: flex;
+    position: relative;
+    background-color: #efefef;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 5px;;
+        height: 100%;
+    }
+
+    &_unknown {
+        &:before {
+            background-color: red;
+        };
+    }
+
+    &_studied {
+        &:before {
+            background-color: yellow;
+        };
+    }
+
+    &_learned {
+        &:before {
+            background-color: green;
+        };
+    }
+
+    &__value {
+        width: calc(50% - 10px - 10px);
+        padding: 8px 0 8px 10px;
+        word-break: break-all;
+        order: 1;
+
+        &_origin {
+            background-color: #efefef;
+        }
+
+        &_trans {
+            background-color: #dedede;
+        }
+
+        &_showed {
+            width: calc(100% - 10px - 10px);
+        }
+
+        &_hidden {
+            width: 0;
+            padding-left: 0;
+            word-break: normal;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        &[data-display="true"] {
+            order: 0;
+        }
+    }
+
+    &__button {
+        width: 20px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        cursor: pointer;
+        background-color: #ccc;
+    }
+}
