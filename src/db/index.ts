@@ -1,38 +1,38 @@
 const data = [
     {
 		"id": "w1",
-		"val": "time",
+		"value": "time",
 		"translate": "время ",
 		"partSpeech": "noun",
-		"status": "unknown"
+		"status": "unlearned"
 	},
 	{
 		"id": "w2",
-		"val": "year",
+		"value": "year",
 		"translate": "год ",
 		"partSpeech": "noun",
-		"status": "unknown"
+		"status": "unlearned"
 	},
 	{
 		"id": "w3",
-		"val": "people",
+		"value": "people",
 		"translate": "люди (народ) ",
 		"partSpeech": "noun",
-		"status": "unknown"
+		"status": "unlearned"
 	},
 	{
-		"wid": "w4",
-		"val": "way",
+		"id": "w4",
+		"value": "way",
 		"translate": "путь (способ)",
 		"partSpeech": "noun",
-		"status": "unknown"
+		"status": "unlearned"
 	},
 	{
 		"id": "w5",
-		"val": "day",
+		"value": "day",
 		"translate": "день ",
 		"partSpeech": "noun",
-		"status": "unknown"
+		"status": "unlearned"
 	}
 ]
 
