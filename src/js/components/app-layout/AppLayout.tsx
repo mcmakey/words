@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Header } from "js/components";
 import { WordList } from "js/components";
-import { IWord} from "js/store/api/types/";
+import { IWord} from "js/store/api/types";
 import "./AppLayout.scss";
 
 type IProps = {

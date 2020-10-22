@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Word } from "../word/Word";
-import { IWord} from "js/store/api/types/";
+import { IWord} from "js/store/api/types";
 import "./WordList.scss";
 
 interface IProps {

@@ -4,35 +4,35 @@ const data = [
 		"value": "time",
 		"translate": "время ",
 		"partSpeech": "noun",
-		"status": "unlearned"
+		"status": "Unlearned"
 	},
 	{
 		"id": "w2",
 		"value": "year",
 		"translate": "год ",
 		"partSpeech": "noun",
-		"status": "unlearned"
+		"status": "Studied"
 	},
 	{
 		"id": "w3",
 		"value": "people",
 		"translate": "люди (народ) ",
 		"partSpeech": "noun",
-		"status": "unlearned"
+		"status": "Learned"
 	},
 	{
 		"id": "w4",
 		"value": "way",
 		"translate": "путь (способ)",
 		"partSpeech": "noun",
-		"status": "unlearned"
+		"status": "Unlearned"
 	},
 	{
 		"id": "w5",
 		"value": "day",
 		"translate": "день ",
 		"partSpeech": "noun",
-		"status": "unlearned"
+		"status": "Unlearned"
 	}
 ]
 
