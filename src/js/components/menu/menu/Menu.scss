@@ -1,0 +1,8 @@
+.menu {
+    display: none;
+    background-color: #fff;
+
+    &_open {
+        display: block;
+    }
+}

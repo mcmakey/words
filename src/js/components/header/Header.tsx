@@ -13,11 +13,9 @@ const Header: React.FC = () => {
             <h1 className="header__title">Words</h1>
             <div className="header__menu">
                 <HeaderMenuButton onClick={toggleShowMenu}/>
-                {showMenu &&
-                    <div className="header__menu-container">
-                        <Menu />
-                    </div>
-                }
+                <div className="header__menu-container">
+                    <Menu open={showMenu}/>
+                </div>
             </div>
         </div>  
     );
