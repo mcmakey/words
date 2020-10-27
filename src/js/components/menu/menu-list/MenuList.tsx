@@ -1,4 +1,5 @@
 import * as React from "react";
+import "./MenuList.scss";
 
 interface IProps {
     children: React.ReactNode;
