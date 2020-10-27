@@ -1,0 +1,57 @@
+@import "../../../../styles/modules/button-unstyled"; //TODO: need absolut path;
+
+.filter {
+    @extend %button-unstyled;
+
+    display: flex;
+    width: 100%;
+    padding: 8px 10px;
+    align-items: center;
+    cursor: pointer;
+    background-color: #aaa;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: #a1a1a1;
+    }
+
+    &__indicator {
+
+        display: block;
+        position: relative;
+        width: 12px;
+        height: 12px;
+        margin-right: 5px;
+        border: 2px solid #333;
+
+        @media (max-width: 980px) { 
+            width: 16px;
+            height: 16px;
+        }
+
+        &:after  {
+            content: "";
+            display: none;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 8px;
+            height: 8px;
+            background-color: #333;
+
+            @media (max-width: 980px) { 
+                width: 10px;
+                height: 10px;
+            }
+        }
+
+        &_active {
+
+            &:after {
+                display: block;
+            }
+        }
+    }
+}

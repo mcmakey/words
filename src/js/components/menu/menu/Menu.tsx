@@ -2,6 +2,7 @@ import * as React from "react";
 import classNames from "classnames";
 import { MenuGroup } from "../menu-group/MenuGroup";
 import { MenuList } from "../menu-list/MenuList";
+import { Filter } from "../filter/Filter";
 import  "./Menu.scss";
 
 interface IProps {
@@ -12,16 +13,16 @@ const Menu: React.FC<IProps> = ({open}) => (
     <div className={classNames("menu", {"menu_open": open})}>
         <MenuGroup title={"menu-group-1"}>
             <MenuList>
-                {"Filter 1"}
-                {"Filter 2"}
-                {"Filter 3"}
+                <Filter name="filter-1" onClick={() => alert("filter-1")}/>
+                <Filter name="filter-2" onClick={() => alert("filter-2")}/>
+                <Filter name="filter-3" onClick={() => alert("filter-3")}/>
             </MenuList>
         </MenuGroup>
         <MenuGroup title={"menu-group-2"}>
             <MenuList>
-                {"Filter 4"}
-                {"Filter 5"}
-                {"Filter 6"}
+                <Filter name="filter-4" onClick={() => alert("filter-4")}/>
+                <Filter name="filter-5" onClick={() => alert("filter-5")}/>
+                <Filter name="filter-6" onClick={() => alert("filter-6")}/>
             </MenuList>
         </MenuGroup>
     </div>

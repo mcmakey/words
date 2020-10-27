@@ -14,11 +14,5 @@
     &__menu {
         position: relative;
         flex-grow: 0;
-
-        &-container {
-            position: absolute;
-            top: 100%;
-            right: 0;
-        }
     }
 }
