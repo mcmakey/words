@@ -47,18 +47,12 @@ const Menu: React.FC<IProps> = ({open}) => {
             ref={menuRef} 
             style={{height: menuHeight}}
         >
-            <MenuGroup title={"menu-group-1"}>
+            <MenuGroup title={"Show words:"}>
                 <MenuList>
-                    <Filter name="filter-1" onClick={() => alert("filter-1")}/>
-                    <Filter name="filter-2" onClick={() => alert("filter-2")}/>
-                    <Filter name="filter-3" onClick={() => alert("filter-3")}/>
-                </MenuList>
-            </MenuGroup>
-            <MenuGroup title={"menu-group-2"}>
-                <MenuList>
-                    <Filter name="filter-4" onClick={() => alert("filter-4")}/>
-                    <Filter name="filter-5" onClick={() => alert("filter-5")}/>
-                    <Filter name="filter-6" onClick={() => alert("filter-6")}/>
+                    <Filter name="All" onClick={() => alert("All")}/>
+                    <Filter name="Unlearned" onClick={() => alert("Unlearned")}/>
+                    <Filter name="Studied" onClick={() => alert("Studied")}/>
+                    <Filter name="Learned" onClick={() => alert("Learned")}/>
                 </MenuList>
             </MenuGroup>
         </div>
