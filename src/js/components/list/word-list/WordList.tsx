@@ -9,7 +9,7 @@ interface IProps {
 
 const WordList: React.FC<IProps> = ({ words }) => (
     <ul className="word-list">
-       { words.map((item,) => (
+       {words.map((item,) => (
            <li className="word-list__item" key={item.id}>
               <Word word={item} />
            </li>
