@@ -1,9 +1,10 @@
 import * as React from "react";
 import classNames from "classnames";
 import {useEventListener} from "js/hooks";
+import {  FilterStatus } from "js/store/actions";
 import { MenuGroup } from "../menu-group/MenuGroup";
 import { MenuList } from "../menu-list/MenuList";
-import { Filter } from "../filter/Filter";
+import { Filter } from "../filter/FilterContainer";
 import  "./Menu.scss";
 
 interface IProps {
@@ -49,10 +50,10 @@ const Menu: React.FC<IProps> = ({open}) => {
         >
             <MenuGroup title={"Show words:"}>
                 <MenuList>
-                    <Filter name="All" onClick={() => alert("All")}/>
-                    <Filter name="Unlearned" onClick={() => alert("Unlearned")}/>
-                    <Filter name="Studied" onClick={() => alert("Studied")}/>
-                    <Filter name="Learned" onClick={() => alert("Learned")}/>
+                    <Filter name="All" filter={FilterStatus.SHOW_ALL} />
+                    <Filter name="Unlearned"  filter={FilterStatus.SHOW_UNLEARNED}/>
+                    <Filter name="Studied"  filter={FilterStatus.SHOW_STUDIED} />
+                    <Filter name="Learned" filter={FilterStatus.SHOW_LEARNED} />
                 </MenuList>
             </MenuGroup>
         </div>

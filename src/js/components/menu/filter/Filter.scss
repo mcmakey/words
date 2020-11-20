@@ -46,8 +46,11 @@
                 height: 10px;
             }
         }
+    }
 
-        &_active {
+    &_active {
+
+        .filter__indicator {
 
             &:after {
                 display: block;
