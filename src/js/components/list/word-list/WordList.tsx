@@ -3,9 +3,11 @@ import { Word } from "../word/Word";
 import { IWord} from "js/store/api/types";
 import "./WordList.scss";
 
-interface IProps {
+export interface IStateProps {
     words: IWord[];
 }
+
+type IProps = IStateProps;
 
 const WordList: React.FC<IProps> = ({ words }) => (
     <ul className="word-list">
