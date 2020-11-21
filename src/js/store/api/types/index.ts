@@ -9,5 +9,5 @@ export interface IWord{
     value: string;
     translate: string;
     partSpeech: string; 
-    status: string; // TODO: WordStatus
+    status: WordStatus;
 }
