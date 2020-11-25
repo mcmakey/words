@@ -1,10 +1,11 @@
 import * as React from "react";
 import clssNames from "classnames";
+import {  FilterStatus } from "js/store/actions";
 import "./Filter.scss";
 
 interface IOwnProps {
     name: string;
-    filter: any;
+    filter: FilterStatus;
 }
 
 export interface IStateProps {

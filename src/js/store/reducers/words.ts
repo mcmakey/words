@@ -1,6 +1,6 @@
 import { data } from "db";
 
-const words = (state = data, action: any /*TODO*/) => {
+const words = (state = data, action: any) => {
     switch (action.type) {
         default:
             return state;
@@ -8,3 +8,5 @@ const words = (state = data, action: any /*TODO*/) => {
 };
 
 export { words };
+
+// TODO: any

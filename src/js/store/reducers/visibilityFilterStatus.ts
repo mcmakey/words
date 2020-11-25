@@ -3,7 +3,7 @@ import {
     SET_VISIBILITY_FILTER_STATUS 
 } from "js/store/actions";
 
-const visibilityFilterStatus = (state = FilterStatus.SHOW_ALL, action: any /* todo */) => {
+const visibilityFilterStatus = (state = FilterStatus.SHOW_ALL, action: any ) => {
     switch (action.type) {
         case SET_VISIBILITY_FILTER_STATUS:
             return action.filter;
@@ -13,3 +13,5 @@ const visibilityFilterStatus = (state = FilterStatus.SHOW_ALL, action: any /* to
 }
 
 export { visibilityFilterStatus };
+
+// TODO: any
