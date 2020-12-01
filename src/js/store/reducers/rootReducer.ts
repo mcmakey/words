@@ -7,4 +7,6 @@ const rootReducer = combineReducers({
     visibilityFilterStatus
 });
 
+export type RootState = ReturnType<typeof rootReducer>;
+
 export { rootReducer };

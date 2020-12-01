@@ -3,7 +3,7 @@ import clssNames from "classnames";
 import { FilterStatus } from "js/store/api/types";
 import "./Filter.scss";
 
-interface IOwnProps {
+export interface IOwnProps {
     name: string;
     filter: FilterStatus;
 }
