@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import { WordList, IStateProps } from "./WordList";
 import { IWord, WordStatus} from "js/store/api/types";
-import { FilterStatus } from "js/store/actions";
+import { FilterStatus } from "js/store/api/types";
 
 const getVisibleWords = (words: IWord[], filter: FilterStatus) => {
     switch (filter) {

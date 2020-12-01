@@ -1,13 +1,8 @@
-import { SET_VISIBILITY_FILTER_STATUS } from "./actionsTypes";
+import { SET_VISIBILITY_FILTER_STATUS, setVisibilityFilterStatusTypes } from "./actionsTypes";
+import { FilterStatus } from "js/store/api/types";
 
-enum FilterStatus  {
-    SHOW_ALL = "SHOW_ALL",
-    SHOW_UNLEARNED = "SHOW_UNLEARNED",
-    SHOW_STUDIED = "SHOW_STUDIED",
-    SHOW_LEARNED ="SHOW_LEARNED"
-}
 
-const setVisibilityFilterStatus = (filter: FilterStatus) => {
+const setVisibilityFilterStatus = (filter: FilterStatus): setVisibilityFilterStatusTypes => {
     return {
         type: SET_VISIBILITY_FILTER_STATUS,
         filter
@@ -15,6 +10,5 @@ const setVisibilityFilterStatus = (filter: FilterStatus) => {
 }
 
 export { 
-    FilterStatus,
     setVisibilityFilterStatus
  };

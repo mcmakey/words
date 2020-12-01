@@ -1,7 +1,7 @@
 import * as React from "react";
 import classNames from "classnames";
 import {useEventListener} from "js/hooks";
-import {  FilterStatus } from "js/store/actions";
+import { FilterStatus } from "js/store/api/types";
 import { MenuGroup } from "../menu-group/MenuGroup";
 import { MenuList } from "../menu-list/MenuList";
 import { Filter } from "../filter/FilterContainer";
