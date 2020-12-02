@@ -1,5 +1,13 @@
-import { SET_VISIBILITY_FILTER_STATUS, setVisibilityFilterStatusTypes } from "./actionsTypes";
-import { FilterStatus } from "js/store/api/types";
+import { 
+    SET_VISIBILITY_FILTER_STATUS,
+    setVisibilityFilterStatusTypes,
+    TOGGLE_WORD_STATUS,
+    toggleWordStatusTypes
+ } from "./actionsTypes";
+import { 
+    FilterStatus,
+    TypeWordId
+} from "js/store/api/types";
 
 
 const setVisibilityFilterStatus = (filter: FilterStatus): setVisibilityFilterStatusTypes => {
@@ -9,6 +17,14 @@ const setVisibilityFilterStatus = (filter: FilterStatus): setVisibilityFilterSta
     }
 }
 
+const toggleWordStatus = (id: TypeWordId): toggleWordStatusTypes => {
+    return {
+        type: TOGGLE_WORD_STATUS,
+        id
+    }
+}
+
 export { 
-    setVisibilityFilterStatus
- };
+    setVisibilityFilterStatus,
+    toggleWordStatus
+};

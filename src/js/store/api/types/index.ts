@@ -4,6 +4,8 @@ export enum WordStatus {
     Learned = "Learned"
 }
 
+export type TypeWordId = string;
+
 export enum FilterStatus  {
     SHOW_ALL = "SHOW_ALL",
     SHOW_UNLEARNED = "SHOW_UNLEARNED",
@@ -12,7 +14,7 @@ export enum FilterStatus  {
 }
 
 export interface IWord{
-    id: string;
+    id: TypeWordId;
     value: string;
     translate: string;
     partSpeech: string; 
