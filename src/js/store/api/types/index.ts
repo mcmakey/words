@@ -18,7 +18,7 @@ export interface IWord{
     value: string;
     translate: string;
     partSpeech: string; 
-    status: WordStatus;
+    status: string;
 }
 
 export interface WordsState {

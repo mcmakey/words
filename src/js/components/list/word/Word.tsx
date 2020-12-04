@@ -6,9 +6,10 @@ import "./Word.scss";
 
 interface IProps {
     word: IWord;
+    onClick: () => void;
 }
 
-const Word: React.FC<IProps> = ({ word }) => {
+const Word: React.FC<IProps> = ({ word, onClick }) => {
     
     const classNameStatus = getClassNameStatus(word.status);
 
@@ -16,7 +17,7 @@ const Word: React.FC<IProps> = ({ word }) => {
         <div className={classNames("word", classNameStatus)}>
             <div className="word__value word__value_origin">{word.value}</div>
             <div className="word__value word__value_trans">{word.translate}</div>
-            <button className="word__button"></button>
+            <button className="word__button" onClick={onClick}></button>
         </div>
     )
 };

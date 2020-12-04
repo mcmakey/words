@@ -1,7 +1,8 @@
 import { connect } from "react-redux";
-import { WordList, IStateProps } from "./WordList";
+import { WordList, IStateProps, IDispatchProps } from "./WordList";
 import { IWord, WordStatus} from "js/store/api/types";
 import { FilterStatus } from "js/store/api/types";
+import { toggleWordStatus } from "js/store/actions";
 
 const getVisibleWords = (words: IWord[], filter: FilterStatus) => {
     switch (filter) {
@@ -18,11 +19,13 @@ const getVisibleWords = (words: IWord[], filter: FilterStatus) => {
     }
 } 
 
-const WordListContainer = connect<IStateProps>(
+const WordListContainer = connect<IStateProps, IDispatchProps>(
     (state: any) => ({
         words: getVisibleWords(state.words, state.visibilityFilterStatus)
     }),
-    {}
+    (dispatch) => ({
+        toggleWord: id => dispatch(toggleWordStatus(id))
+    })
 )(WordList);
 
 export { WordListContainer as WordList };
