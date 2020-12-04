@@ -4,22 +4,24 @@ import {
     TOGGLE_WORD_STATUS
 } from "js/store/actions/actionsTypes";
 import { 
-    // WordStatus,
-    IWord
+    IWord,
+    WordStatus
 } from "js/store/api/types";
 
 const setWordStatus = (word: IWord) => {
-    const statuses = ["Unlearned", "Studied", "Learned"]; // TODO: how to use enum WordStatus ?
-    const currentStatus = word.status;
-    const indexCurrentStatus = statuses.indexOf(currentStatus);
     
-    let nextIndexCurrentStatus = 0;
+    const currentStatus = word.status;
 
-    if (indexCurrentStatus < statuses.length - 1) {
-        nextIndexCurrentStatus = indexCurrentStatus + 1; 
+    switch (currentStatus) {
+        case WordStatus.Unlearned:
+            return WordStatus.Studied;
+        case WordStatus.Studied:
+            return WordStatus.Learned;
+        case WordStatus.Learned:
+            return WordStatus.Unlearned;
+        default:
+            return currentStatus;
     }
-
-    return statuses[nextIndexCurrentStatus];
 }
 
 const words = (state = data, action: toggleWordStatusTypes) => {
