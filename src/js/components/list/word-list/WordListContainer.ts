@@ -3,6 +3,7 @@ import { WordList, IStateProps, IDispatchProps } from "./WordList";
 import { IWord, WordStatus} from "js/store/api/types";
 import { FilterStatus } from "js/store/api/types";
 import { toggleWordStatus } from "js/store/actions";
+import { RootState } from "js/store/reducers/rootReducer";
 
 const getVisibleWords = (words: IWord[], filter: FilterStatus) => {
     switch (filter) {
@@ -19,8 +20,8 @@ const getVisibleWords = (words: IWord[], filter: FilterStatus) => {
     }
 } 
 
-const WordListContainer = connect<IStateProps, IDispatchProps>(
-    (state: any) => ({
+const WordListContainer = connect<IStateProps, IDispatchProps, {}, RootState>(
+    (state) => ({
         words: getVisibleWords(state.words, state.visibilityFilterStatus)
     }),
     (dispatch) => ({
@@ -29,5 +30,3 @@ const WordListContainer = connect<IStateProps, IDispatchProps>(
 )(WordList);
 
 export { WordListContainer as WordList };
-
-// TODO: any
