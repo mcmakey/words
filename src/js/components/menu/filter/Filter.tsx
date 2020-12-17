@@ -4,28 +4,25 @@ import { FilterStatus } from "js/store/api/types";
 import "./Filter.scss";
 
 export interface IOwnProps {
-    name: string;
+    filterName: string;
     filter: FilterStatus;
-}
-
-export interface IStateProps {
-    active: boolean;
+    active?: boolean; // TODO: ? 
 }
 
 export interface IDispatchProps {
-    onFilter: () => void;
+    onFilter?: () => void; // TODO: ?
 }
 
-type IProps = IOwnProps & IStateProps & IDispatchProps;
+type IProps = IOwnProps & IDispatchProps;
 
-const Filter: React.FC<IProps> = ({name, active, onFilter}) => (
+const Filter: React.FC<IProps> = ({filterName, active, onFilter}) => (
     <button 
         className={clssNames("filter", {"filter_active": active})} 
         disabled={active}
         onClick={onFilter}
     >
         <span className="filter__indicator"/>
-        <span className="filter__name">{name}</span>
+        <span className="filter__name">{filterName}</span>
     </button>
 );
 

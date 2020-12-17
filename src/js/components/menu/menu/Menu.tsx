@@ -50,10 +50,10 @@ const Menu: React.FC<IProps> = ({open}) => {
         >
             <MenuGroup title={"Show words:"}>
                 <MenuList>
-                    <Filter name="All" filter={FilterStatus.SHOW_ALL} />
-                    <Filter name="Unlearned"  filter={FilterStatus.SHOW_UNLEARNED}/>
-                    <Filter name="Studied"  filter={FilterStatus.SHOW_STUDIED} />
-                    <Filter name="Learned" filter={FilterStatus.SHOW_LEARNED} />
+                    <Filter filterName="All" filter={FilterStatus.SHOW_ALL} />
+                    <Filter filterName="Unlearned"  filter={FilterStatus.SHOW_UNLEARNED}/>
+                    <Filter filterName="Studied"  filter={FilterStatus.SHOW_STUDIED} />
+                    <Filter filterName="Learned" filter={FilterStatus.SHOW_LEARNED} />
                 </MenuList>
             </MenuGroup>
         </div>

@@ -1,27 +1,25 @@
 import * as React from "react";
 import { Word } from "../word/Word";
-import { IWord} from "js/store/api/types";
 import { TypeWordId } from "js/store/api/types";
 import "./WordList.scss";
+import { IWord } from "js/store/api/types";
 
-export interface IStateProps {
+export interface IWordListProps  {
     words: IWord[];
+    onToggleWord: (id: TypeWordId) => void;
 }
 
-export interface IDispatchProps {
-    toggleWord: (id: TypeWordId) => void;
-}
+const WordList: React.FC<IWordListProps> = ({ words, onToggleWord }) => {
 
-type IProps = IStateProps & IDispatchProps;
-
-const WordList: React.FC<IProps> = ({ words, toggleWord}) => (
-    <ul className="word-list">
-       {words.map((item,) => (
-           <li className="word-list__item" key={item.id}>
-              <Word word={item} onClick={() => toggleWord(item.id)}/>
-           </li>
-       ))}
-    </ul>
-);
+    return (
+        <ul className="word-list">
+            {words.map((item,) => (
+                <li className="word-list__item" key={item.id}>
+                    <Word word={item} onClick={() => onToggleWord(item.id)}/>
+                </li>
+            ))}
+        </ul>
+    );
+};
 
 export { WordList };
